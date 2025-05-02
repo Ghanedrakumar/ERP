@@ -13,12 +13,6 @@ mongoose.connect(process.env.DATABASE_CON).then(()=>{
     console.log(err)
 })
 
-app.use(cors({
-  origin: "https://erp-mfmz.vercel.app", // Replace with your frontend domain
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true
-}));
-
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
