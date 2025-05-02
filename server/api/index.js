@@ -2,6 +2,7 @@ import express from 'express'
 import UserRoute from '../Routes/Data.js'
 import mongoose from 'mongoose'
 import dotenv from 'dotenv'
+import cors from 'cors'
 dotenv.config()
 const app = express()
 const port = process.env.PORT
@@ -11,6 +12,12 @@ mongoose.connect(process.env.DATABASE_CON).then(()=>{
 }).catch((err)=>{
     console.log(err)
 })
+
+app.use(cors({
+  origin: "https://erp-mfmz.vercel.app", // Replace with your frontend domain
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
