@@ -75,7 +75,7 @@ const Dashboard = () => {
 
   return (
     <div className=' '>
-<span className='flex justify-center items-center font-bold shadow-amber-50  text-5xl mb-15 mt-15'>Student Dashboard</span>
+<span className='flex justify-center items-center font-bold shadow-amber-50  text-3xl mb-15 mt-15'>Student Dashboard</span>
 
 <div className='font-bold  text-2xl p-5 underline '>
   Total Count: {allNotes.length}
