@@ -94,7 +94,7 @@ const Dashboard = () => {
               </tr>
             </thead>
             <tbody>
-              {allNotes.map((note, index) => (
+              {allNotes.map((note, ) => (
                 <tr key={note._id}>
                   <td className="border px-4 py-2">{note.name}</td>
                   <td className="border px-4 py-2">{note.grade}</td>
